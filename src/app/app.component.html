@@ -1,0 +1,31 @@
+<div class="page">
+  <div class="margin-bottom">
+    <input
+      type="text"
+      placeholder="压缩包文件名"
+      [(ngModel)]="fileName"
+      class="input-box"
+    />
+    <div *ngIf="showFileNameMsg" class="error">没输名字</div>
+  </div>
+  <div class="margin-bottom">
+    <input type="file" [multiple]="true" (input)="uploadFiles($event)" />
+    <div *ngIf="showFileCountMsg" class="error">没选文件</div>
+  </div>
+  <div class="margin-bottom">已选文件: {{ files.length }}个</div>
+  <div class="margin-bottom">
+    <button (click)="pack()" [disabled]="packButtonDisable">打包</button>
+  </div>
+
+  <div *ngIf="packButtonDisable" class="margin-bottom">
+    <div>
+      读取文件:
+      {{ readFiles }} / {{ files.length }}
+    </div>
+    <div>打包文件: {{ percent }}%</div>
+  </div>
+
+  <div *ngIf="showFinishMsg" class="success" class="margin-bottom">
+    {{ fileName }}.zip 压完了
+  </div>
+</div>

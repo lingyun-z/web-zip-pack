@@ -1,0 +1,37 @@
+.error {
+  color: rgb(177, 0, 0);
+}
+
+.success {
+  color: rgb(0, 177, 0);
+}
+
+.input-box {
+  border-radius: 4px;
+  border: 1px solid #dbdbdb;
+}
+input {
+  padding: 10px;
+  font-size: 18px;
+}
+button {
+  background-color: rgb(0, 177, 0);
+  color: #fff;
+  height: 43px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+.margin-bottom {
+  margin-bottom: 20px;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 300px;
+  max-width: 500px;
+  margin: 100px auto;
+}
