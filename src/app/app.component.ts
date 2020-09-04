@@ -46,7 +46,6 @@ export class AppComponent implements OnInit {
   }
 
   uploadFiles(event) {
-    console.log(event);
     const files = event.target.files;
     this.files = [...this.files, ...Array.from(files)];
   }
