@@ -1,0 +1,8 @@
+version: "2"
+services:
+  zip-app:
+    restart: always
+    image: zip-app
+    container_name: zip-app
+    ports:
+      - "2333:80"
