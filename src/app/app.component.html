@@ -9,7 +9,12 @@
     <div *ngIf="showFileNameMsg" class="error">没输名字</div>
   </div>
   <div class="margin-bottom">
-    <input type="file" [multiple]="true" (input)="uploadFiles($event)" />
+    <input
+      type="file"
+      [multiple]="true"
+      (change)="uploadFiles($event)"
+      accept="image/*"
+    />
     <div *ngIf="showFileCountMsg" class="error">没选文件</div>
   </div>
   <div class="margin-bottom">已选文件: {{ files.length }}个</div>
